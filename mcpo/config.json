@@ -1,0 +1,6 @@
+{
+  "mcpServers": {
+    "time_paris": { "url": "http://time-paris:8080/sse" },
+    "time_ny":    { "url": "http://time-ny:8080/sse" }
+  }
+}

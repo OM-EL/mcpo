@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  mcpo:
+    build: ./mcpo
+    volumes:
+      - ./mcpo/config.json:/app/config.json:ro
+    ports:
+      - "8000:8000"
+    depends_on: [time-paris, time-ny]
+
+  time-paris:
+    build: ./time-server-paris
+    expose: ["8080"]
+
+  time-ny:
+    build: ./time-server-ny
+    expose: ["8080"]
